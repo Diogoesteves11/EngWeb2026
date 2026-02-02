@@ -1,12 +1,12 @@
-# *Engenharia Web 2026*
+# **Engenharia Web 2026**
 ---
-### *Autor*
+### **Autor**
 
 * ID: A104004
 * Nome: Diogo José Fernandes Esteves
 * Foto: 
 
-![alt text](Pic.jpeg)
+<img src="Pic.jpeg" width="10%" />
 
 ### Resumo : 
 
@@ -16,11 +16,11 @@
 
 ### Lista de Resultados: 
 
-* [TP1](./TP1/README.md)
-* [TP2](./TP2/README.md)
-* [TP3](./TP3/README.md)
-* [TP4](./TP4/README.md)
-* [TP5](./TP5/README.md)
-* [TP6](./TP6/README.md)
-* [TP7](./TP7/README.md)
-* [TP8](./TP8/README.md)
+* [TP1](./TP1)
+* [TP2](./TP2)
+* [TP3](./TP3)
+* [TP4](./TP4)
+* [TP5](./TP5)
+* [TP6](./TP6)
+* [TP7](./TP7)
+* [TP8](./TP8)
