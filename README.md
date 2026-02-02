@@ -6,7 +6,7 @@
 * Nome: Diogo José Fernandes Esteves
 * Foto: 
 
-<img src="Pic.jpeg" width="10%" />
+<img src="Pic.jpeg" width="20%" />
 
 ### Resumo : 
 
