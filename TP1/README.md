@@ -18,4 +18,5 @@
 
 ### Lista de Resultados: 
 
-* [outputs](./output)
+* Executar comando: `python3 json2html.py`
+
