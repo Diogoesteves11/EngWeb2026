@@ -9,7 +9,7 @@
 * Nome: Diogo José Fernandes Esteves
 * Foto: 
 
-<img src="Pic.jpeg" width="20%" />
+<img src="../Pic.jpeg" width="20%" />
 
 ### Resumo : 
 
@@ -22,9 +22,9 @@
 ### Lista de Resultados: 
 
 * Executar comando para instalar axios: `npm install axios`
-* Executar comando para iniciar servidor de dados: `json-server --watch dataset_reparacoes.json'
-* Executar, noutro terminal, comando para iniciar servidor aplicacional: 'node server.js'
+* Executar comando para iniciar servidor de dados: `json-server --watch dataset_reparacoes.json`
+* Executar, noutro terminal, comando para iniciar servidor aplicacional: `node server.js`
 * Realizar pedidos do género de: 
 
-** 'http://localhost:7777/viaturas' no browser, no terminal (através de curl) ou no postman
+** `http://localhost:7777/viaturas` no browser, no terminal (através de curl) ou no postman
 
