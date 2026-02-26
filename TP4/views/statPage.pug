@@ -1,0 +1,82 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-teal
+      h1 EMD Statistics Dashboard
+    
+    .w3-container.w3-padding-16.w3-light-grey
+      .w3-row-padding
+        
+        .w3-col.m6.w3-margin-bottom
+          .w3-card.w3-round.w3-white
+            header.w3-container.w3-teal
+              h3 Gender Distribution
+            table.w3-table.w3-bordered.w3-striped
+              tr
+                th Gender
+                th Count
+              each val, key in stats.genero
+                tr
+                  td= key === 'M' ? 'Male (M)' : (key === 'F' ? 'Female (F)' : key)
+                  td= val
+
+        .w3-col.m6.w3-margin-bottom
+          .w3-card.w3-round.w3-white
+            header.w3-container.w3-teal
+              h3 Results
+            table.w3-table.w3-bordered.w3-striped
+              tr
+                th Status
+                th Count
+              each val, key in stats.resultado
+                tr
+                  td= key === 'true' ? 'Passed' : 'Failed'
+                  td= val
+
+      .w3-row-padding
+        .w3-col.m6.w3-margin-bottom
+          .w3-card.w3-round.w3-white
+            header.w3-container.w3-teal
+              h3 Federated Status
+            table.w3-table.w3-bordered.w3-striped
+              tr
+                th Federated
+                th Count
+              each val, key in stats.federado
+                tr
+                  td= key === 'true' ? 'Yes' : 'No'
+                  td= val
+
+        .w3-col.m6.w3-margin-bottom
+          .w3-card.w3-round.w3-white
+            header.w3-container.w3-teal
+              h3 Sports
+            div(style="max-height: 200px; overflow-y: auto;")
+              table.w3-table.w3-bordered.w3-striped
+                tr
+                  th Sport
+                  th Count
+                each val, key in stats.modalidade
+                  tr
+                    td= key
+                    td= val
+                    
+      .w3-row-padding
+        .w3-col.m12.w3-margin-bottom
+          .w3-card.w3-round.w3-white
+            header.w3-container.w3-teal
+              h3 Clubs
+            div(style="max-height: 250px; overflow-y: auto;")
+              table.w3-table.w3-bordered.w3-striped
+                tr
+                  th Club
+                  th Count
+                each val, key in stats.clube
+                  tr
+                    td= key
+                    td= val
+
+    footer.w3-container.w3-teal.w3-padding-16
+      a.w3-btn.w3-white.w3-text-teal.w3-round.w3-hover-gray(href="/")
+        b Voltar

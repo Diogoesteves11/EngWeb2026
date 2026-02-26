@@ -1,0 +1,53 @@
+extends layout 
+
+block content
+  .w3-card-4 
+    header.w3-container.w3-teal
+      h2 EMD Register
+    
+    form.w3-container.w3-padding-16(method="POST" action="/emd/registo")
+      fieldset
+        legend Exam Information
+        
+        label ID
+        input.w3-input.w3-round(type="text" name="id" required)
+        
+        label Date
+        input.w3-input.w3-round(type="date" name="dataEMD" required)
+        
+        label Name
+        input.w3-input.w3-round(type="text" name="nome" required)
+        
+        label Age
+        input.w3-input.w3-round(type="number" name="idade" required)
+        
+        label Gender
+        select.w3-select.w3-round(name="género" required)
+          option(value="" disabled selected) Escolha o género
+          option(value="F") Feminino (F)
+          option(value="M") Masculino (M)
+        
+        label Address
+        input.w3-input.w3-round(type="text" name="morada" required)
+        
+        label Sport
+        input.w3-input.w3-round(type="text" name="modalidade" required)
+        
+        label Club
+        input.w3-input.w3-round(type="text" name="clube" required)
+        
+        label Mail
+        input.w3-input.w3-round(type="email" name="email" required)
+        
+        label Federated
+        select.w3-select.w3-round(name="federado" required)
+          option(value="true") Sim
+          option(value="false") Não
+          
+        label Result
+        select.w3-select.w3-round(name="resultado" required)
+          option(value="false") Falhou
+          option(value="true") Passou
+      
+      button.w3-btn.w3-teal.w3-margin-top(type="submit") Insert
+      a.w3-btn.w3-grey.w3-margin-top.w3-margin-left(href="/") Cancel

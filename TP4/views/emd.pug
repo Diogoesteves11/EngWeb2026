@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  .w3-card-4.w3-margin
+    header.w3-container.w3-teal
+      h1 EMD PAGE
+    
+    .w3-container
+      table.w3-table-all.w3-margin-top.w3-margin-bottom
+        tr
+          th(style="width: 20%") ID
+          td= emd.id
+        tr
+          th Data EMD
+          td= emd.dataEMD
+        tr
+          th Nome
+          td= emd.nome
+        tr
+          th Idade
+          td= emd.idade
+        tr
+          th Género
+          td= emd.género
+        tr
+          th Morada
+          td= emd.morada
+        tr
+          th Modalidade
+          td= emd.modalidade
+        tr
+          th Clube
+          td= emd.clube
+        tr
+          th Email
+          td= emd.email
+        tr
+          th Federado
+          td= emd.federado ? 'Yes' : 'No'
+        tr
+          th Resultado
+          td= emd.resultado ? 'Passed' : 'Failed'
+
+    footer.w3-container.w3-teal.w3-padding-16
+      a.w3-btn.w3-white.w3-text-teal.w3-round.w3-hover-gray(href="/")
+        b Voltar

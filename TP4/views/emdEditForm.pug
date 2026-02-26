@@ -1,0 +1,52 @@
+extends layout 
+
+block content
+  .w3-card-4 
+    header.w3-container.w3-teal
+      h2 Editar EMD: #{emd.nome}
+    
+    form.w3-container.w3-padding-16(method="POST" action=`/emd/editar/${emd.id}`)
+      fieldset
+        legend Atualizar Dados do Exame
+        
+        label ID
+        input.w3-input.w3-round.w3-light-grey(type="hidden" name="id" value=emd.id readonly)
+        
+        label Data do Exame
+        input.w3-input.w3-round(type="date" name="dataEMD" value=emd.dataEMD required)
+        
+        label Nome
+        input.w3-input.w3-round(type="text" name="nome" value=emd.nome required)
+        
+        label Idade
+        input.w3-input.w3-round(type="number" name="idade" value=emd.idade required)
+        
+        label Género
+        select.w3-select.w3-round(name="género" required)
+          option(value="F" selected=(emd.género === 'F')) Feminino (F)
+          option(value="M" selected=(emd.género === 'M')) Masculino (M)
+        
+        label Morada
+        input.w3-input.w3-round(type="text" name="morada" value=emd.morada required)
+        
+        label Modalidade
+        input.w3-input.w3-round(type="text" name="modalidade" value=emd.modalidade required)
+        
+        label Clube
+        input.w3-input.w3-round(type="text" name="clube" value=emd.clube required)
+        
+        label Email
+        input.w3-input.w3-round(type="email" name="email" value=emd.email required)
+        
+        label Federado
+        select.w3-select.w3-round(name="federado" required)
+          option(value="true" selected=(emd.federado === true || emd.federado === 'true')) Sim
+          option(value="false" selected=(emd.federado === false || emd.federado === 'false')) Não
+          
+        label Resultado (Apto)
+        select.w3-select.w3-round(name="resultado" required)
+          option(value="true" selected=(emd.resultado === true || emd.resultado === 'true')) Passou 
+          option(value="false" selected=(emd.resultado === false || emd.resultado === 'false')) Falhou 
+      
+      button.w3-btn.w3-teal.w3-margin-top(type="submit") Guardar Alterações
+      a.w3-btn.w3-grey.w3-margin-top.w3-margin-left(href=`/emd/${emd.id}`) Cancelar
