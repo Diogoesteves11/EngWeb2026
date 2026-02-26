@@ -30,7 +30,8 @@
   * `utils.js`: Módulo com a função `getStats` para tratamento estatístico dos dados.
   * Vistas Pug na pasta `views/`: Posições para lista, formulários (registo e edição), página de perfil e *dashboard* de estatísticas.
 * Para executar o projeto na sua totalidade, utilize os seguintes comandos (em terminais separados):
-  1. Dependências: `npm i pug` `npm i express`
-  2. Base de dados: `json-server --watch dataset/emd_fixed.json`
-  3. Servidor Web (Express): `node src/server.js`
+  1. Tratamento do dataset: `python3 dataset/dataset_treatment.py`
+  2. Dependências: `npm i pug` & `npm i express`
+  3. Base de dados: `json-server --watch dataset/emd_fixed.json`
+  4. Servidor Web (Express): `node src/server.js`
 * A interface web ficará disponível no browser em: `http://localhost:7777` ou em `http://localhost:7777/emd`
