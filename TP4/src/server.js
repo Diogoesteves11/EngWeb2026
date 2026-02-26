@@ -110,7 +110,7 @@ app.get('/emd/:id', (req, res) => {
 });
 
 
-app.post('/emd/registo', (req, res) => {
+app.post('/emd', (req, res) => {
     const novoEMD = req.body;
 
     novoEMD.idade = parseInt(novoEMD.idade);
@@ -137,7 +137,7 @@ app.post('/emd/registo', (req, res) => {
 });
 
 
-app.post('/emd/editar/:id', (req, res) => {
+app.post('/emd/:id', (req, res) => {
     const id = req.params.id;
     const emdAtualizado = req.body;
 
