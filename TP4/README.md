@@ -22,11 +22,12 @@
   * **Dashboard de Estatísticas:** Criação de um módulo analítico (`public/javascripts/utils.js`) para calcular a distribuição de exames por Género, Modalidade, Clube, Resultado e Estado Federado, apresentados num *dashboard* visual.
 
 ### Lista de Resultados: 
-  Para executar o projeto na sua totalidade, utilize os seguintes comandos (em terminais separados):
-    1. **Tratamento do dataset:** `python3 dataset/dataset_treatment.py` *(caso ainda não tenha sido gerado o ficheiro fixed)*
-    2. **Instalação de Dependências:** `npm install` *(instala automaticamente o Express, Pug e restantes dependências do `package.json`)*
-    3. **Lançamento da API (Base de Dados):** `npx json-server --watch dataset/emd_fixed.json --port 3000`
-    4. **Servidor Web (Express):** `npm start`.
-    5. A interface web ficará disponível no browser em: `http://localhost:3007`.
+Para executar o projeto na sua totalidade, utilize os seguintes comandos (em terminais separados):
+1. **Tratamento do dataset:** `python3 dataset/dataset_treatment.py` *(caso ainda não tenha sido gerado o ficheiro fixed)*
+2. **Instalação de Dependências:** `npm install` *(instala automaticamente o Express, Pug e restantes dependências do `package.json`)*
+3. **Lançamento da API (Base de Dados):** `npx json-server --watch dataset/emd_fixed.json --port 3000`
+4. **Servidor Web (Express):** `npm start`.
+5. A interface web ficará disponível no browser em: `http://localhost:3007`.
+
 
 
