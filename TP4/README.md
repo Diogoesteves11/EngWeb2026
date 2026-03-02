@@ -22,20 +22,11 @@
   * **Dashboard de Estatísticas:** Criação de um módulo analítico (`public/javascripts/utils.js`) para calcular a distribuição de exames por Género, Modalidade, Clube, Resultado e Estado Federado, apresentados num *dashboard* visual.
 
 ### Lista de Resultados: 
+  Para executar o projeto na sua totalidade, utilize os seguintes comandos (em terminais separados):
+    1. **Tratamento do dataset:** `python3 dataset/dataset_treatment.py` *(caso ainda não tenha sido gerado o ficheiro fixed)*
+    2. **Instalação de Dependências:** `npm install` *(instala automaticamente o Express, Pug e restantes dependências do `package.json`)*
+    3. **Lançamento da API (Base de Dados):** `npx json-server --watch dataset/emd_fixed.json --port 3000`
+    4. **Servidor Web (Express):** `npm start`.
+    5. A interface web ficará disponível no browser em: `http://localhost:3007`.
 
-* O projeto adotou a hierarquia do Express Generator, destacando-se os seguintes ficheiros e diretorias:
-  * `dataset/emd_fixed.json`: Base de dados tratada e pronta a usar pela API.
-  * `app.js` e `bin/www`: Configuração base do servidor Express e ponto de entrada da aplicação.
-  * `routes/index.js`: Onde está centralizado todo o roteamento da aplicação e os pedidos HTTP à API.
-  * `public/javascripts/utils.js`: Módulo contendo a função `getStats` para o processamento estatístico dos dados.
-  * `views/`: Diretoria contendo os *templates* Pug (ex: `index.pug`, `emdRegisterPage.pug`, `emdEditPage.pug`, `emdStatPage.pug`).
 
-### Instruções de Execução:
-
-Para executar o projeto na sua totalidade, utilize os seguintes comandos (em terminais separados):
-1. **Tratamento do dataset:** `python3 dataset/dataset_treatment.py` *(caso ainda não tenha sido gerado o ficheiro fixed)*
-2. **Instalação de Dependências:** `npm install` *(instala automaticamente o Express, Pug e restantes dependências do `package.json`)*
-3. **Lançamento da API (Base de Dados):** `npx json-server --watch dataset/emd_fixed.json --port 3000`
-4. **Servidor Web (Express):** `npm start`.
-
-A interface web ficará disponível no browser em: `http://localhost:7777` (ou na porta configurada no ficheiro `bin/www`).
