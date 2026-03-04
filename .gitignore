@@ -15,7 +15,6 @@ env/
 .DS_Store
 
 node_modules/
-package.json
 package-lock.json
 
 *.log
