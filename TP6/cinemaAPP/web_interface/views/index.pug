@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  header.w3-container.w3-black.w3-padding-32(style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;")
+    
+    div(style="display: flex; align-items: center;")
+      
+      a(href="/filmes" title="Voltar à lista de filmes" style="margin-right: 20px;")
+        img(src="/images/filmTape.png" alt="Ícone Home" style="height: 50px; cursor: pointer; filter: invert(1);")
+      
+      div
+        h1.w3-xxlarge.w3-wide.w3-uppercase(style="margin: 0;")= title
+        p.w3-opacity(style="margin: 0; padding-top: 8px;") Welcome to the film collection
+        
+    div(style="margin-top: 10px;")
+      a.w3-button.w3-white.w3-text-black.w3-hover-light-grey.w3-round.w3-margin-right(href="/atores") 
+        b Actors
+      a.w3-button.w3-white.w3-text-black.w3-hover-light-grey.w3-round.w3-margin-right(href="/generos") 
+        b Genres
+
+      a.w3-button.w3-white.w3-text-black.w3-hover-light-grey.w3-round.w3-margin-right(href="/filmes?_sort=year") 
+        b Sort by Year
+      a.w3-button.w3-white.w3-text-black.w3-hover-light-grey.w3-round(href="/filmes?_sort=title") 
+        b Sort by Name
+
+  .w3-container.w3-padding-64.w3-content(style="max-width: 1200px;")
+    
+    .w3-card-4.w3-white
+      table.w3-table-all.w3-hoverable
+        thead
+          tr.w3-dark-grey
+            th ID
+            th Title
+            th Year
+            th.w3-center # Genres
+            th.w3-center # Cast
+        
+        tbody
+          if films && films.length > 0
+            each film in films
+              tr(style="cursor: pointer;" onclick=`window.location.href='/filmes/${film.id}'`).w3-hover-light-grey
+                td= film.id
+                td
+                  b= film.title
+                td= film.year
+                td.w3-center= film.genres ? film.genres.length : 0
+                td.w3-center= film.cast ? film.cast.length : 0
+          else
+            tr
+              td(colspan="5").w3-center.w3-padding-32 No films found

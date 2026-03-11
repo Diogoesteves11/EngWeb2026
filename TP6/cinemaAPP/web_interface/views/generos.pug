@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  header.w3-container.w3-black.w3-padding-32(style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;")
+    
+    div(style="display: flex; align-items: center;")
+      a(href="/filmes" title="Voltar à lista de filmes" style="margin-right: 20px;")
+        img(src="/images/filmTape.png" alt="Ícone Home" style="height: 50px; cursor: pointer; filter: invert(1);")
+      
+      div
+        h1.w3-xxlarge.w3-wide.w3-uppercase Genre List
+        p.w3-opacity List of all movie genres
+        
+    div(style="margin-top: 10px;")
+      a.w3-button.w3-white.w3-text-black.w3-hover-light-grey.w3-round(href="/generos?_sort=name") 
+        b Sort by Name
+
+  .w3-container.w3-padding-64.w3-content(style="max-width: 1000px;")
+    
+    .w3-card-4.w3-white
+      table.w3-table-all.w3-hoverable
+        thead
+          tr.w3-dark-grey
+            th ID
+            th Designation
+            th.w3-center # Films
+        
+        tbody
+          if genres && genres.length > 0
+            each genre in genres
+              tr.w3-hover-light-grey
+                td= genre.id
+                td
+                  b= genre.name
+                td.w3-center= genre.films ? genre.films.length : 0
+          else
+            tr
+              td(colspan="3").w3-center.w3-padding-32 No genres found.

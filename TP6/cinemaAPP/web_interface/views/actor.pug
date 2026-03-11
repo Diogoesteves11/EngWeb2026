@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  header.w3-container.w3-black.w3-padding-32(style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;")
+    
+    div(style="display: flex; align-items: center;")
+      a(href="/filmes" title="Voltar à lista de filmes" style="margin-right: 20px;")
+        img(src="/images/filmTape.png" alt="Ícone Home" style="height: 50px; cursor: pointer; filter: invert(1);")
+      
+      div
+        h1.w3-xxlarge.w3-wide.w3-uppercase(style="margin: 0;")= title
+        p.w3-opacity(style="margin: 0; padding-top: 8px;") #{actor.name} Info
+        
+  .w3-container.w3-padding-64.w3-content(style="max-width: 900px;")
+    
+    .w3-card-4.w3-white
+      .w3-container.w3-center.w3-padding-32
+        h2.w3-jumbo.w3-margin-bottom
+          b= actor.name
+        h3.w3-text-dark-grey ID: #{actor.id}
+      
+      hr(style="margin: 0 16px; border-top: 2px solid #eee;")
+
+      .w3-row.w3-padding-32
+        .w3-half.w3-container
+          h4.w3-black.w3-center.w3-padding # Films
+          ul.w3-ul.w3-border
+            if actor.films && actor.films.length > 0
+              li.w3-center.w3-xlarge= actor.films.length
+            else
+              li.w3-text-grey.w3-center This actor has no films.
+
+        .w3-half.w3-container
+          h4.w3-dark-grey.w3-center.w3-padding Filmography
+          ul.w3-ul.w3-hoverable.w3-border
+            if films && films.length > 0
+              each title, index in films
+                li
+                  a(href="/filmes/" + actor.films[index] style="text-decoration: none; display: block;")
+                    b= title
+            else
+              li.w3-text-grey.w3-center No titles found.
